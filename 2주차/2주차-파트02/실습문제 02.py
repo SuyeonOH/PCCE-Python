@@ -1,13 +1,11 @@
-def solution(n):
-    #원래 append를 사용해서 list로 만들어서 하려고 했음... -> 복잡
+def solution(t, p):
+    answer = 0
+    list = [0]*(len(t)-len(p)+1)
     
-    # 정수를 문자열로 변환하여 각 자릿수를 리스트에 저장
-    digit_list = list(str(n))
+    #t를 p의 길이만큼 자른 것을 배열에 넣어두기 
+    for i in range (len(t)-len(p)+1) : #이 부분 생각 못했음..
+        list[i]=int(t[i:i+len(p)]) #슬라이싱 사용
+        if int(p)>= list[i] :    #배열 돌리면서 수 비교 후 answer++   
+            answer+=1
     
-    # 각 자릿수를 큰 순서로 정렬
-    sorted_digits = sorted(digit_list, reverse=True)
-    
-    # 정렬된 자릿수를 문자열로 결합하고 정수로 변환
-    result = int(''.join(sorted_digits))
-    
-    return result
+    return answer

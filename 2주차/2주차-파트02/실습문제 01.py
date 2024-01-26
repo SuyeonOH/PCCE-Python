@@ -1,6 +1,11 @@
-def solution(num_list, n):
-    answer = []
+def solution(q, r, code):
+    answer = ''
+    tmp=[0]*len(code)
+
+    for i in range (len(code)) :
+        tmp[i]=i%q
+        
+        if tmp[i] ==r:
+            answer+= code[i]
     
-    for i in range (0,len(num_list),n) :
-        answer.append(num_list[i])
     return answer
