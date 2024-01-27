@@ -1,0 +1,10 @@
+str = input()
+result=''
+# print(str.swapcase())이 있지만 기억 안날 거 뻔함
+for s in str :
+    if 'a'<=s<='z' : #소문자라면 즉 uppercase해줘야함
+        result+=s.upper()
+    else :
+        result+=s.lower()
+print(result)
+#print(''.join(x.upper() if x == x.lower() else x.lower() for x in input()))
