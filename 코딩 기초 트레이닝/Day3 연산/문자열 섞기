@@ -1,0 +1,12 @@
+def solution(str1, str2):  
+    result=[]
+    s1=list(str1)
+    s2=list(str2)
+    
+    for i in range(len(str1)) :
+        result+=s1[i] #str1[i], 문자열에서도 이렇게 사용가능
+        result+=s2[i]
+    
+    #answer = ''.join([str1[i] + str2[i] for i in range(len(str1))])
+
+    return ''.join(result)

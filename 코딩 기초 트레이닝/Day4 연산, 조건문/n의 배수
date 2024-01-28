@@ -1,0 +1,8 @@
+def solution(num, n):
+    if num%n==0:
+        return 1
+    else :
+        return 0
+#return int(not(num % n)) not 안에 넣으면 bool로 해석돼서
+#return int(num % n == 0)
+
