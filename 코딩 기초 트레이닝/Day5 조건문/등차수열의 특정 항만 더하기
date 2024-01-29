@@ -1,0 +1,14 @@
+def solution(a, d, included):
+    sum=0
+    index=0
+    for i in included:
+        if i==True:
+            sum+=a+(d*index)
+        index+=1
+    return sum
+#과연 index가 필요했을까?
+#sum=0
+#for i in range(len(included)):
+#    answer += (a+d*i) *int(included[i])
+#return sum
+
