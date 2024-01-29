@@ -1,0 +1,22 @@
+def solution(code):
+    ret=''
+    mode=0
+    for i in range (len(code)):
+        if mode == 0 :
+            if code[i] =='1' :
+                mode=1
+            else :
+                if i%2==0:
+                    ret+=code[i]
+                    
+        elif mode == 1 : #여기서 elif를 안 쓰고 if로 써서 처리가 제대로 안됐다...
+            if code[i]=='1':
+                     mode = 0
+            else:
+                if i%2!=0:
+                    ret+=code[i]                    
+    return 'EMPTY' if ret=='' else ret
+#return "".join(code.split("1"))[::2] or "EMPTY" ㄷㄷ
+#if code[i]=='1':
+#   mode ^= 1 ^=는 비트연산자 중에 xor을 뜻하며 두 비트가 같으면 0 다르면 1
+#   mode가 0이면 결과가 1이 되고 1이면 같기 때문에 0이됨
