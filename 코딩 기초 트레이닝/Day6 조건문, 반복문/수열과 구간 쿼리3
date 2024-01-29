@@ -1,0 +1,10 @@
+def solution(arr, queries):
+    # for i in range (len(queries)+1) :
+    #     for j in range (len(queries)-1):
+    #         arr[queries[i][j]]=arr[queries[i][j+1]]
+    #         arr[queries[i][j+1]]=arr[queries[i][j]]
+    # return queries 범위
+    for a,b in queries:
+        arr[a], arr[b] = arr[b], arr[a]
+
+    return arr

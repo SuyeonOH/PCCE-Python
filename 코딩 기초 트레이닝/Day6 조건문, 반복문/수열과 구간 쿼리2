@@ -1,0 +1,23 @@
+def solution(arr, queries):
+    answer = []
+    
+    for a,b,c in queries:
+        com=[]    
+        flag=0
+
+        for i in range(b-a+1): #범위에서 실수가 있었음 +1 안한 거..
+            if c<arr[i+a]: #시작점의 문제: 예시에서 0밖에 없었어서 생각을 못했음..
+                com.append(arr[i+a])
+                flag=1 #있다
+        if flag==0 :
+            answer.append(-1)
+        else :
+            answer.append(min(com))
+    return answer
+# for s,e,k in queries:
+#     tmp=[]
+#     for x in arr[s:e+1]:
+#         if x> k:
+#             tmp.append(x)
+#     answer.append(-1 if not tmp else min(tmp))
+# return answer 같은 논리이긴하나 더 보기 쉽게 정리된 듯

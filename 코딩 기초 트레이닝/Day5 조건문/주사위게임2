@@ -1,9 +1,22 @@
 def solution(a, b, c):
-    if a==b and b==c :
+    if a==b and b==c : #a==b==c
         return (a+b+c)*(a**2 + b**2 + c**2)*(a**3 + b**3 + c**3)
     elif a!=b and b!=c and a!=c :
         return a+b+c
-    else :
+    else : # a==b or b==c or a==c 
         return (a+b+c)*(a**2 + b**2 + c**2)
-        
+
+
+    #answer=a+b+c
+    #if a==b or b==c or a==c: answer*=a**2+b**2+c**2
+    #if a==b==c:answer*=a**3+b**3+c**3
+    #return answer
+
+    #check=len(set([a,b,c])) 사용법을 아는 게 중요하다...
+    #if check==1:
+    #    return 3*a*3*(a**2)*3*(a**3)
+    #elif check==2:
+    #    return (a+b+c)*(a**2+b**2+c**2)
+    #else:
+    #   return (a+b+c)
     
