@@ -1,0 +1,9 @@
+def solution(num_list):
+    n1=''
+    n2=''
+    for num in num_list:
+        if num%2==0 :
+            n1+=str(num)
+        else :
+            n2+=str(num)
+    return int(n1)+int(n2)

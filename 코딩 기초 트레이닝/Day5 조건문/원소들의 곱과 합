@@ -1,0 +1,11 @@
+def solution(num_list):
+    sum=0
+    mul=1
+    for num in num_list :
+        sum+=num
+        mul*=num
+    
+    if mul < sum*sum :
+        return 1
+    else :
+        return 0
