@@ -1,0 +1,21 @@
+def solution(arr):
+    stk = []
+    i=0
+    
+    while i<len(arr):
+        if len(stk)==0:
+            stk.append(arr[i])
+            i+=1
+        elif stk[len(stk)-1]<arr[i]:
+            stk.append(arr[i])
+            i+=1
+        else:
+            stk.remove(stk[len(stk)-1])#stk.pop(),del stk[len(stk)-1]
+
+    return stk
+
+    for i in range(len(arr)):
+        while stk and stk[-1] >= arr[i]:
+            stk.pop() #반대로 생각하는 방법
+        stk.append(arr[i])
+    return stk

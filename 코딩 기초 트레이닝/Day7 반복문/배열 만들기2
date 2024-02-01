@@ -1,0 +1,25 @@
+def solution(l, r):
+    answer = []
+    #5의 배수여야함
+    while l%5!=0:
+        l+=1
+    
+    start=l
+    for i in range(l,r+1,5):
+        # for j in str(i):
+        #     if j !='5' and j!='0':
+        #         break
+        #     answer.append(str(i)) 쉽지 않음..
+        if all (ch in '05' for ch in str(i)):
+            answer.append(i)
+            
+    if len(answer)==0:
+        answer.append(-1)
+        
+    return answer
+
+    answer = []
+    for num in range(l, r + 1):
+        if not set(str(num)) - set(['0', '5']):#문자열로 변환 후각 문자를 집합으로 만듦 -> 0,5외의 숫자가 없다면
+            answer.append(num)
+    return answer if answer else [-1]
