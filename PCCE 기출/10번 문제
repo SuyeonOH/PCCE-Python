@@ -1,0 +1,15 @@
+def solution(data, ext, val_ext, sort_by):
+    # 조건에 맞는 데이터 필터링
+    filtered_data = [item for item in data if item[data[0].index(ext)] < val_ext]
+
+    # 정렬 기준에 따라 데이터 정렬
+    sorted_data = sorted(filtered_data, key=lambda x: x[data[0].index(sort_by)])
+
+    return sorted_data
+
+# 예시 데이터
+data = [[1, 20300104, 100, 80], [2, 20300804, 847, 37], [3, 20300401, 10, 8]]
+
+# 예시 테스트
+result = solution(data, "date", 20300501, "remain")
+print(result)
