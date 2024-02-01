@@ -1,0 +1,77 @@
+def solution(a, b, c, d):
+    # 주사위 숫자를 정렬
+    dice = [a, b, c, d]
+    dice.sort()
+
+    # 모든 주사위의 숫자가 같은 경우
+    if dice[0] == dice[3]:
+        return 1111 * dice[0]
+
+    # 세 주사위 중 두 숫자가 같은 경우
+    if dice[0] == dice[2] and dice[3] != dice[2]:
+        return (10 * dice[0] + dice[3]) ** 2
+    if dice[1] == dice[3] and dice[0] != dice[1]:
+        return (10 * dice[1] + dice[0]) ** 2
+
+    # 두 쌍의 주사위 숫자가 각각 같은 경우
+    if dice[0] == dice[1] and dice[2] == dice[3]:
+        return (dice[0] + dice[2]) * dice[0] - dice[2] #sort했기때문에 abs를 할 필요도 없음
+
+    # 두 주사위의 숫자가 각각 같은 경우
+    if dice[0] == dice[1] and dice[2] != dice[3]:
+        return dice[2] * dice[3]
+    if dice[1]==dice[2] :
+        return dice[0]*dice[3]
+    if dice[0] != dice[1] and dice[2] == dice[3]:
+        return dice[0] * dice[1]
+
+    # 모든 주사위가 다른 경우
+    return min(dice)
+    # if a==b==c==d :
+    #     return 1111*a
+    # elif a==b:
+    #     if c!=d:
+    #         if b!=c :
+    #             return c*d
+    #         else :
+    #             return (10*a+d)**2
+    #     else : 
+    #         return (a+c) *abs(a-c)
+    # elif a==c:
+    #     if b!=d:
+    #         if b!=c:
+    #             return b*d
+    #         else :
+    #             return (10*a+b)**2
+    #     else :
+    #         return (a+d) *abs(a-d)
+        
+    # elif a==d:
+    #     if b!=c :
+    #         if b!=d:
+    #             return b*c
+    #         else:
+    #             return (10*a+c)**2
+    #     else:
+    #         return (a+c)*abs(a-c)
+    # elif b==c:
+    #     return a*d
+    # elif b==d :
+    #     return a*c
+    # else :
+    #     return min(a,b,c,d) 경우의 수가 많아서 조건문에 따라 작성하기가 어려웠음.. 결국엔 못 품
+#이런 걸 어떻게 생각해내지...?
+# def solution(a, b, c, d):
+#     l = [a,b,c,d]
+#     c = [l.count(x) for x in l]
+#     if max(c) == 4:
+#         return 1111*a
+#     elif max(c) == 3:
+#         return (10*l[c.index(3)]+l[c.index(1)])**2
+#     elif max(c) == 2:
+#         if min(c) == 1:
+#             return eval('*'.join([str(l[i]) for i, x in enumerate(c) if x == 1])) i는 index x는 값, eval함수는 식을 계산해서 보여줌
+#         else:
+#             return (max(l) + min(l)) * abs(max(l) - min(l))
+#     else:
+#         return min(l)

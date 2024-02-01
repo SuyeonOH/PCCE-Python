@@ -1,0 +1,11 @@
+def solution(my_string, queries):      
+    #뒤집은 부분을 따로 집어넣는 식
+    for s,e in queries :
+        reverse=my_string[s:e+1][::-1]
+        my_string=my_string[:s]+reverse+my_string[e+1:]
+    return ''.join(my_string)
+#문자열은 불변(immutable) 객체이기 때문에, 직접적인 인덱스에 대한 할당이나 교환은 불가능
+;  answer=list(my_string)
+;     for s,e in queries:
+;         answer[s:e+1]=answer[s:e+1][::-1]
+;     return ''.join(answer)
