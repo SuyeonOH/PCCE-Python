@@ -1,0 +1,6 @@
+def solution(my_string, s, e):
+    # return my_string[:s]+my_string[e:s-1:-1]+my_string[e+1:]
+    #s가 0일 경우 문제가 안 풀림... ->         return my_string[:s]+my_string[s:e+1][::-1]+my_string[e+1:]하면 되는 거였음...
+    array = list(my_string)
+    reversed_substring = ''.join(array[s:e+1:][::-1])
+    return my_string[:s] +reversed_substring+ my_string[e+1:]
