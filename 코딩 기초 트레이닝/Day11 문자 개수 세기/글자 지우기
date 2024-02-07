@@ -1,0 +1,5 @@
+def solution(my_string, indices):
+    m=list(my_string)
+    for i in indices :
+        m[i]=''
+    return ''.join(m)
