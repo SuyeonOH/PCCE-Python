@@ -1,0 +1,16 @@
+def solution(num_list):
+    e=0
+    o=0
+    
+    for i in range(len(num_list)):
+        if i%2==0:
+            e+=num_list[i]
+        else:
+            o+=num_list[i]
+    
+    if e>o:
+        return e
+    else :
+        return o
+    
+    # return max(sum(num_list[::2]), sum(num_list[1::2]))
