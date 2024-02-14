@@ -3,4 +3,6 @@ def solution(str_list):
         if str == "l" :
             return str_list[:str_list.index("l")]
         elif str =="r":
-            return str_list[str_list.index("r"):]
+            return str_list[str_list.index("r")+1:]
+    return []   
+     

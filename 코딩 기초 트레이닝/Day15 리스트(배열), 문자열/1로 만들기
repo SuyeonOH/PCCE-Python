@@ -1,0 +1,11 @@
+def solution(num_list):
+    sum=0
+    for num in num_list:
+        cnt=0
+        while num!=1:    
+            # if num%2!=0:
+            #     num-=1 이부분 없어도 됨
+            num//=2
+            cnt+=1
+        sum+=cnt
+    return sum

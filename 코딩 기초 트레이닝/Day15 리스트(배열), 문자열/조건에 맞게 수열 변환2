@@ -1,8 +1,17 @@
-def solution(num_list):
-    for num in num_list:
-        while num!=1:    
-            # if num%2!=0:
-            #     num-=1 사실상 이게 필요 없음 
-            num//=2
+def solution(arr):
+    cnt=0
+    old=arr #그 전의 배열
+    while 1:
+        new=[]
+        for i in old:
+            if i >=50 and i%2==0:
+                i//=2
+            elif i<50 and i%2!=0:
+                i=i*2+1
+            new.append(i)
+            
+        if new == old:
+            return cnt
+        else:
+            old=new
             cnt+=1
-    return cnt

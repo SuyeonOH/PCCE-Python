@@ -1,0 +1,11 @@
+def solution(myString, pat):
+    m=myString.upper()
+    p=pat.upper()
+
+    if len(m)<len(p):
+        return 0
+    elif m.find(p)!=-1:
+        return 1
+    else:
+        return 0
+    #return int(pat.lower() in myString.lower())
