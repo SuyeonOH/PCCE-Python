@@ -1,0 +1,8 @@
+def solution(num_list):
+    for num in num_list:
+        while num!=1:    
+            # if num%2!=0:
+            #     num-=1 사실상 이게 필요 없음 
+            num//=2
+            cnt+=1
+    return cnt
