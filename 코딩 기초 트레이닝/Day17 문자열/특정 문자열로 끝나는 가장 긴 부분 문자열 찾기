@@ -1,0 +1,5 @@
+def solution(myString, pat):
+    return myString[:myString.rfind(pat) + len(pat)]#rfind의 존재를 알았음..
+    # i=myString.find(pat)
+    # return myString[:i+len(pat)]
+# solution=lambda x,y:x[:x.rindex(y)+len(y)]
