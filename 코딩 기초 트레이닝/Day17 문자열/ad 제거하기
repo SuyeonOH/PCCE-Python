@@ -1,0 +1,8 @@
+def solution(strArr):
+    result=[]
+    #del 쓰려 했는데 까먹음
+    for str in strArr:
+        if 'ad' not in str:
+            result.append(str)
+    return result
+#return [str for str in strArr if 'ad' not in word]

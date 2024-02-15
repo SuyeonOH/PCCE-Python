@@ -1,0 +1,14 @@
+def solution(my_string):
+    result=[]
+    string=''
+    for str in my_string:
+        if str==' ':
+            result.append(string)         
+            string=''
+        else:
+            string+=str
+    result.append(string)         
+    return result
+#return my_string.strip().split('')   ....^____^
+#strip()은 시작과 끝의 공백을 없애줌 // lstrip과 rstrip으로 나눌 수 있음
+#split() 괄호 안의 기준으로 나눠서 리스트로 반환

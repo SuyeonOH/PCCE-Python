@@ -1,0 +1,4 @@
+def solution(my_string):
+    return my_string.strip().split()
+#my_string.strip().split(' ') 으로 하면 하나로 인정되기 때문에 안됨
+#solution=lambda x:x.split()
