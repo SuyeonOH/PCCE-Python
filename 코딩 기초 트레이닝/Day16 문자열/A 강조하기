@@ -1,0 +1,10 @@
+def solution(myString):
+    result=''
+    for s in myString:
+        if s=='a' or s=='A':
+            result+=s.upper()
+        else:
+            result+=s.lower()
+    
+    return result
+#return myString.lower().replace('a','A')
