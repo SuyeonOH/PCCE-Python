@@ -1,0 +1,14 @@
+def solution(myString, pat):
+    #겹치는 걸 어떻게 처리할건지..
+    result=0
+    pat_len=len(pat)
+    for i in range(len(myString)-pat_len+1):
+        if myString[i:i+pat_len] == pat:
+            result += 1
+    return result
+
+# for i, x in enumerate(myString):
+#     if myString[i:].startswith(pat):
+#         result+=1
+
+# return sum(myString[i:i+len(pat)] == pat for i in range(len(myString)))

@@ -1,0 +1,3 @@
+def solution(myString):
+    #어떻게 x 뒤의 문자열을 해결? -> if str
+    return sorted(str for str in myString.split('x') if str)

@@ -9,3 +9,4 @@ def solution(num_list):
             cnt+=1
         sum+=cnt
     return sum
+#return sum(len(bin(i))-3 for i in num_list) 이해가 잘 안됨요...
