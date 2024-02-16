@@ -1,0 +1,12 @@
+def solution(myString):
+    return [len(w) for w in myString.split('x')]
+    # result=[]
+    # count=0
+    # for str in myString:
+    #     if str=='x':
+    #         result.append(count)
+    #         count=0
+    #     else:
+    #         count+=1
+    # result.append(count)
+    # return result
