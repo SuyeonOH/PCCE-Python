@@ -1,0 +1,12 @@
+def solution(myString, pat):
+    #replace?
+    str=''
+    for i in myString:
+        if i=='A':
+            str+='B'
+        else:
+            str+='A'
+    if str.find(pat)==-1:
+        return 0
+    else:
+        return 1
