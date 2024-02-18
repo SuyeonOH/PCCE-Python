@@ -15,9 +15,9 @@ def solution(arr, flag):
     #     else:
     #         for _ in range(arr[i]):
     #             X.pop()
+
     # for i, j in zip(arr, flag):         #zip을 이용한 방법
     #     if j:
     #         answer+=[i]*i*2
     #     else:
     #         answer = arr1[:-i]
-
