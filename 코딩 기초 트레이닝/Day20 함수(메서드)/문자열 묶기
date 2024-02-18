@@ -1,0 +1,10 @@
+def solution(strArr):
+    answer=[]
+    count=[]
+    for str in strArr:
+        answer.append(len(str))
+    
+    for i in range(max(answer)+1):
+        if i in answer:
+            count.append(answer.count(i))
+    return max(count)
