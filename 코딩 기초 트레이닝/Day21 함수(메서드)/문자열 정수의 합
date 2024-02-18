@@ -1,0 +1,7 @@
+def solution(num):
+    n=list(num)
+    result=0
+    
+    for i in range(len(n)):
+        result+=int(n[i])
+    return result
