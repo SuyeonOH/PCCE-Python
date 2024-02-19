@@ -1,0 +1,17 @@
+def solution(arr):
+    l=len(arr)
+    while l & (l - 1) != 0:  # Check if length is not a power of 2
+        arr.append(0)  # Add zero until length becomes a power of 2
+        l += 1
+    return arr
+    #while l!=1 or l>2:
+    #    l/=2
+
+    #if l==1:
+    #    return arr
+    #else:
+    #    while l!=1:
+    #        arr.append(0)
+    #        l+=1
+    #        l/=2
+    #return arr
