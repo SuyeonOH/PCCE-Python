@@ -1,0 +1,9 @@
+def solution(myString):
+    result=''
+    for str in myString:
+        if str <'l':
+            result+='l'
+        else:
+            result+=str
+    return result
+# return myString.translate(str.maketrans('abcdefghijk','lllllllllll'))
