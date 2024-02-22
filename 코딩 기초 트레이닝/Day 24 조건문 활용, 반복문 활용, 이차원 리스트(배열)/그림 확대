@@ -1,0 +1,13 @@
+def solution(picture, k):
+    answer = []
+    for pic in picture:
+        word = ''
+        for s in pic:
+            word += s*k
+        for _ in range(k):
+            answer.append(word)
+    return answer
+#문제를 잘 읽자.....
+# for i in range(len(picture)):
+#     for _ in range(k):
+#         answer.append(picture[i].replace('.','.'*k).replace('x','x'*k))
