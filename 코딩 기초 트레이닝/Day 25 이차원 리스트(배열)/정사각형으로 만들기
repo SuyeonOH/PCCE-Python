@@ -1,0 +1,16 @@
+def solution(arr):
+    k=len(arr[0]) #k=2 k=4
+    q=len(arr) #q=4 q=2
+    
+    if q>k:
+        for i in range(q):
+            for z in range(q-k):
+                arr[i].append(0)
+            
+    elif q<k:
+        for j in range(k-q):
+            arr.append([0]*k)
+            
+    return arr 
+# 입력값 〉 [[1, 1], [1, 1], [1, 1], [1, 1]]
+# 기댓값 〉 [[1, 1, 0, 0], [1, 1, 0, 0], [1, 1, 0, 0], [1, 1, 0, 0]] 잘한 듯
