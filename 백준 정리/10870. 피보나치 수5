@@ -1,0 +1,10 @@
+def fib(n):
+    if n==0:
+        ans=0
+    if n==1:
+        ans=1
+    elif n>=2:
+        ans=fib(n-1)+fib(n-2)
+
+    return ans
+print(fib(int(input())))

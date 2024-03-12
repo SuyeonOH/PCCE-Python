@@ -1,0 +1,11 @@
+import sys
+word=list(sys.stdin.readline().rstrip())
+
+reverse_list=list(reversed(word))
+if word==reverse_list:
+    print(1)
+else:
+    print(0)
+
+#reverse는 list 타입, word_reverse=word.reverse()
+#reversed는 내장함수, list에서 제공 x, word_reverse=list(reversed(word))
